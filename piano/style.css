@@ -1,0 +1,158 @@
+@font-face {font-family: "Funky";
+  src: url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.eot"); 
+  src: url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.eot?#iefix") format("embedded-opentype"), 
+  url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.woff2") format("woff2"),
+  url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.woff") format("woff"),
+  url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.ttf") format("truetype"),
+  url("fonts/@font-face/c02ac8066e6e73830a3ea55ae73d370a.svg#Fung FooRegular W00 Regular") format("svg"); 
+}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F63E31;
+  font-family: "Quicksand" !important;
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+}
+img{
+  user-select: none;
+}
+*::selection{
+  color: #E60048;
+  background: #FFD102;
+}
+.heading{
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  font-family: "Funky";
+  cursor: pointer;
+}
+.heading span{
+  color: white;
+}
+.description{
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-family: "Quicksand";
+}
+.caption{
+  position: absolute;
+  top: 600px;
+  text-align: center;
+  color: #b5bcc4;
+  font-size: 16px;
+  font-family: "Quicksand";
+}
+a{
+  text-decoration: none;
+  color: beige;
+  font-family: "Quicksand";
+}
+.piano {
+  display: flex;
+  position: relative;
+  margin-left: 4px;
+}
+
+.white-key {
+  width: 80px;
+  height: 240px;
+  background-color: #FFF;
+  border: 2px solid black;
+  border-radius: 0 0 6px 6px;
+  margin-left: -4px;
+  outline: none;
+  cursor: cell;
+}
+.white-key figcaption{
+  position: relative;
+  top: 80px;
+  left: 16px;
+  color: grey;
+  font-weight: 1000;
+  user-select: none;
+}
+.white-key.active {
+  background-color: #C0C0C0;
+}
+
+.black-key {
+  position: absolute;
+  width: 48px;
+  height: 160px;
+  background-color: black;
+  border: 3px solid black;
+  border-radius: 0 0 2px 2px;
+  outline: none;
+  cursor: cell;
+}
+.black-key figcaption{
+  position: relative;
+  top: 50px;
+  color: grey;
+  font-size: 12px;
+  font-weight: 1000;
+  user-select: none;
+}
+
+.black-key.active {
+  background-color: #424040;
+  border: 3px solid #424040;
+}
+
+.Db4-key {
+  left: 50px;
+}
+
+.Eb4-key {
+  left: 130px;
+}
+
+.Gb4-key {
+  left: 280px;
+}
+
+.Ab4-key {
+  left: 355px;
+}
+
+.Bb4-key {
+  left: 435px;
+}
+
+.Db5-key {
+  left: 585px;
+}
+
+.Eb5-key {
+  left: 660px;
+}
+.mobile{
+  display: none;
+  font-family: "Quicksand";
+}
+@media(max-width: 768px) {
+  .piano{
+    display: none !important;
+  }
+  .mobile{
+    display: block;
+    text-align: center;
+  }
+  .description{
+    top: 150px;
+  }
+}
